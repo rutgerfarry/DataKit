@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AC25D33F200D6A7000345565 /* DataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC25D335200D6A7000345565 /* DataKit.framework */; };
-		AC25D344200D6A7000345565 /* DataKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25D343200D6A7000345565 /* DataKitTests.swift */; };
+		AC25D344200D6A7000345565 /* InsertionSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25D343200D6A7000345565 /* InsertionSortTests.swift */; };
 		AC25D346200D6A7000345565 /* DataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AC25D338200D6A7000345565 /* DataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC25D350200D6A8B00345565 /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25D34F200D6A8B00345565 /* InsertionSort.swift */; };
+		AC25D352200D74F700345565 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25D351200D74F700345565 /* MergeSort.swift */; };
+		AC25D354200D750400345565 /* MergeSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25D353200D750400345565 /* MergeSortTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +30,11 @@
 		AC25D338200D6A7000345565 /* DataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataKit.h; sourceTree = "<group>"; };
 		AC25D339200D6A7000345565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC25D33E200D6A7000345565 /* DataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC25D343200D6A7000345565 /* DataKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataKitTests.swift; sourceTree = "<group>"; };
+		AC25D343200D6A7000345565 /* InsertionSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSortTests.swift; sourceTree = "<group>"; };
 		AC25D345200D6A7000345565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC25D34F200D6A8B00345565 /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
+		AC25D351200D74F700345565 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
+		AC25D353200D750400345565 /* MergeSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSortTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				AC25D338200D6A7000345565 /* DataKit.h */,
+				AC25D34F200D6A8B00345565 /* InsertionSort.swift */,
+				AC25D351200D74F700345565 /* MergeSort.swift */,
 				AC25D339200D6A7000345565 /* Info.plist */,
 			);
 			path = DataKit;
@@ -80,7 +88,8 @@
 		AC25D342200D6A7000345565 /* DataKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC25D343200D6A7000345565 /* DataKitTests.swift */,
+				AC25D343200D6A7000345565 /* InsertionSortTests.swift */,
+				AC25D353200D750400345565 /* MergeSortTests.swift */,
 				AC25D345200D6A7000345565 /* Info.plist */,
 			);
 			path = DataKitTests;
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					AC25D334200D6A7000345565 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					AC25D33D200D6A7000345565 = {
@@ -196,6 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC25D352200D74F700345565 /* MergeSort.swift in Sources */,
+				AC25D350200D6A8B00345565 /* InsertionSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC25D344200D6A7000345565 /* DataKitTests.swift in Sources */,
+				AC25D354200D750400345565 /* MergeSortTests.swift in Sources */,
+				AC25D344200D6A7000345565 /* InsertionSortTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +347,7 @@
 		AC25D34A200D6A7000345565 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rutgerfarry.DataKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +370,7 @@
 		AC25D34B200D6A7000345565 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +392,7 @@
 		AC25D34D200D6A7000345565 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QBR52NJ4V;
 				INFOPLIST_FILE = DataKitTests/Info.plist;
@@ -390,6 +407,7 @@
 		AC25D34E200D6A7000345565 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6QBR52NJ4V;
 				INFOPLIST_FILE = DataKitTests/Info.plist;
