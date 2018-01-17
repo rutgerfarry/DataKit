@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		AC25D33F200D6A7000345565 /* DataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC25D335200D6A7000345565 /* DataKit.framework */; };
 		AC25D344200D6A7000345565 /* InsertionSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25D343200D6A7000345565 /* InsertionSortTests.swift */; };
-		AC25D346200D6A7000345565 /* DataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AC25D338200D6A7000345565 /* DataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC25D350200D6A8B00345565 /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25D34F200D6A8B00345565 /* InsertionSort.swift */; };
 		AC25D352200D74F700345565 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25D351200D74F700345565 /* MergeSort.swift */; };
 		AC25D354200D750400345565 /* MergeSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25D353200D750400345565 /* MergeSortTests.swift */; };
+		AC5BFF62200DD8CE009E249F /* SortTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BFF61200DD8CE009E249F /* SortTestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		AC25D335200D6A7000345565 /* DataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC25D338200D6A7000345565 /* DataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataKit.h; sourceTree = "<group>"; };
 		AC25D339200D6A7000345565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC25D33E200D6A7000345565 /* DataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC25D343200D6A7000345565 /* InsertionSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSortTests.swift; sourceTree = "<group>"; };
@@ -35,6 +34,7 @@
 		AC25D34F200D6A8B00345565 /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
 		AC25D351200D74F700345565 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 		AC25D353200D750400345565 /* MergeSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSortTests.swift; sourceTree = "<group>"; };
+		AC5BFF61200DD8CE009E249F /* SortTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortTestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,6 @@
 		AC25D337200D6A7000345565 /* DataKit */ = {
 			isa = PBXGroup;
 			children = (
-				AC25D338200D6A7000345565 /* DataKit.h */,
 				AC25D34F200D6A8B00345565 /* InsertionSort.swift */,
 				AC25D351200D74F700345565 /* MergeSort.swift */,
 				AC25D339200D6A7000345565 /* Info.plist */,
@@ -90,6 +89,7 @@
 			children = (
 				AC25D343200D6A7000345565 /* InsertionSortTests.swift */,
 				AC25D353200D750400345565 /* MergeSortTests.swift */,
+				AC5BFF61200DD8CE009E249F /* SortTestHelpers.swift */,
 				AC25D345200D6A7000345565 /* Info.plist */,
 			);
 			path = DataKitTests;
@@ -102,7 +102,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC25D346200D6A7000345565 /* DataKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +116,7 @@
 				AC25D331200D6A7000345565 /* Frameworks */,
 				AC25D332200D6A7000345565 /* Headers */,
 				AC25D333200D6A7000345565 /* Resources */,
+				ACA51249200ED2E1008F9573 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -201,6 +201,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ACA51249200ED2E1008F9573 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC25D330200D6A7000345565 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -216,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC25D354200D750400345565 /* MergeSortTests.swift in Sources */,
+				AC5BFF62200DD8CE009E249F /* SortTestHelpers.swift in Sources */,
 				AC25D344200D6A7000345565 /* InsertionSortTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@ I'm currently writing this for coding interview practice / general interest. Not
 ### Sorts
 - [X] Insertion Sort
 - [ ] Quicksort
-- [ ] Merge Sort
+- [X] Merge Sort
 
 ### Other Algorithms
 - [ ] Djikstra's Algorithm
