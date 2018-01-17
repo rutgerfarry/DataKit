@@ -16,7 +16,11 @@ class InsertionSortTests: XCTestCase {
         }
         XCTAssertEqual(testArray.insertionSorted(), testArray.sorted())
     }
-    
+
+    func testSwiftAlgorithmClub() {
+        checkSortAlgorithm(insertionSort)
+    }
+
     func testPerformanceExample() {
         var testArray = [Int]()
         for _ in 0...1000 {
@@ -24,8 +28,8 @@ class InsertionSortTests: XCTestCase {
         }
 
         self.measure {
-            let _ = testArray.insertionSorted()
+            _ = testArray.insertionSorted()
         }
     }
-    
+
 }

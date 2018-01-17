@@ -10,8 +10,8 @@ func randomArray(_ size: Int) -> [Int] {
 }
 
 func arrayIsSortedLowToHigh(_ array: [Int]) -> Bool {
-    for x in 1..<array.count {
-        if array[x - 1] > array[x] { return false }
+    for x in 1..<array.count where array[x - 1] > array[x] {
+        return false
     }
     return true
 }
