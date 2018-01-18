@@ -13,6 +13,8 @@
 		AC25D352200D74F700345565 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25D351200D74F700345565 /* MergeSort.swift */; };
 		AC25D354200D750400345565 /* MergeSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25D353200D750400345565 /* MergeSortTests.swift */; };
 		AC5BFF62200DD8CE009E249F /* SortTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BFF61200DD8CE009E249F /* SortTestHelpers.swift */; };
+		ACC4CCB42010273500B6EA68 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC4CCB32010273500B6EA68 /* BinarySearchTree.swift */; };
+		ACC4CCB72010277100B6EA68 /* BinarySearchTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC4CCB62010277100B6EA68 /* BinarySearchTreeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		AC25D351200D74F700345565 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 		AC25D353200D750400345565 /* MergeSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSortTests.swift; sourceTree = "<group>"; };
 		AC5BFF61200DD8CE009E249F /* SortTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortTestHelpers.swift; sourceTree = "<group>"; };
+		ACC4CCB32010273500B6EA68 /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
+		ACC4CCB62010277100B6EA68 /* BinarySearchTreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +81,9 @@
 		AC25D337200D6A7000345565 /* DataKit */ = {
 			isa = PBXGroup;
 			children = (
-				AC25D34F200D6A8B00345565 /* InsertionSort.swift */,
-				AC25D351200D74F700345565 /* MergeSort.swift */,
+				ACC4CCB12010270000B6EA68 /* Sorts */,
 				AC25D339200D6A7000345565 /* Info.plist */,
+				ACC4CCB52010274800B6EA68 /* Data Structures */,
 			);
 			path = DataKit;
 			sourceTree = "<group>";
@@ -87,12 +91,46 @@
 		AC25D342200D6A7000345565 /* DataKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				ACC4CCB22010270B00B6EA68 /* Sorts */,
+				AC25D345200D6A7000345565 /* Info.plist */,
+				ACC4CCB82010277400B6EA68 /* Data Structures */,
+			);
+			path = DataKitTests;
+			sourceTree = "<group>";
+		};
+		ACC4CCB12010270000B6EA68 /* Sorts */ = {
+			isa = PBXGroup;
+			children = (
+				AC25D34F200D6A8B00345565 /* InsertionSort.swift */,
+				AC25D351200D74F700345565 /* MergeSort.swift */,
+			);
+			path = Sorts;
+			sourceTree = "<group>";
+		};
+		ACC4CCB22010270B00B6EA68 /* Sorts */ = {
+			isa = PBXGroup;
+			children = (
 				AC25D343200D6A7000345565 /* InsertionSortTests.swift */,
 				AC25D353200D750400345565 /* MergeSortTests.swift */,
 				AC5BFF61200DD8CE009E249F /* SortTestHelpers.swift */,
-				AC25D345200D6A7000345565 /* Info.plist */,
 			);
-			path = DataKitTests;
+			path = Sorts;
+			sourceTree = "<group>";
+		};
+		ACC4CCB52010274800B6EA68 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				ACC4CCB32010273500B6EA68 /* BinarySearchTree.swift */,
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		ACC4CCB82010277400B6EA68 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				ACC4CCB62010277100B6EA68 /* BinarySearchTreeTests.swift */,
+			);
+			path = "Data Structures";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +263,7 @@
 			files = (
 				AC25D352200D74F700345565 /* MergeSort.swift in Sources */,
 				AC25D350200D6A8B00345565 /* InsertionSort.swift in Sources */,
+				ACC4CCB42010273500B6EA68 /* BinarySearchTree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC4CCB72010277100B6EA68 /* BinarySearchTreeTests.swift in Sources */,
 				AC25D354200D750400345565 /* MergeSortTests.swift in Sources */,
 				AC5BFF62200DD8CE009E249F /* SortTestHelpers.swift in Sources */,
 				AC25D344200D6A7000345565 /* InsertionSortTests.swift in Sources */,
