@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: DataKit.xcodeproj
+xcode_scheme: DataKit
