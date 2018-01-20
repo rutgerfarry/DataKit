@@ -45,19 +45,34 @@ extension BinarySearchTree {
     }
 
     /**
+     * Returns the in-order search path in for the first node matching specified target value.
+     * The last element in the array is the found node. Returns nil if target isn't in the tree.
+     * O(h) runtime, where "h" is the height of the tree
+     */
+    func searchPath(_ target: T, _ path: [BinarySearchTree] = []) -> [BinarySearchTree]? {
+        if value == target {
+            return path + [self]
+        } else if target < value {
+            return left?.searchPath(target, path + [self]) ?? nil
+        } else {
+            return right?.searchPath(target, path + [self]) ?? nil
+        }
+    }
+
+    /**
      * Returns the minumum element in the tree.
      * O(h) runtime, where "h" is the height of the tree.
      */
-    func minimum() -> BinarySearchTree {
-        return left?.minimum() ?? self
+    var minimum: BinarySearchTree {
+        return left?.minimum ?? self
     }
 
     /**
      * Returns the maximum element in the tree.
      * O(h) runtime, where "h" is the height of the tree.
      */
-    func maximum() -> BinarySearchTree {
-        return right?.maximum() ?? self
+    var maximum: BinarySearchTree {
+        return right?.maximum ?? self
     }
 
     /**
@@ -78,6 +93,9 @@ extension BinarySearchTree {
                 right = BinarySearchTree(newValue)
             }
         }
+    }
+
+    func delete(_ target: T) {
     }
 
 }
