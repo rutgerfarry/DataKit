@@ -1,3 +1,6 @@
 language: objective-c
-xcode_project: DataKit.xcodeproj
-xcode_scheme: DataKit
+script: xctool \
+  -workspace DataKit.xcworkspace \
+  -scheme DataKit \
+  -sdk iphonesimulator \
+  run-tests
