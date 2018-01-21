@@ -95,7 +95,28 @@ extension BinarySearchTree {
         }
     }
 
-    func delete(_ target: T) {
+    @discardableResult func delete(_ target: T) -> BinarySearchTree? {
+        guard var path = searchPath(target) else { return nil }
+        guard let node = path.popLast() else { return nil }
+        let parent = path.popLast()
+
+        let replacement: BinarySearchTree<T>?
+
+        if let left = left {
+            replacement = left.maximum
+        } else if let right = right {
+            replacement = right.minimum
+        } else {
+            replacement = nil
+        }
+
+        if node === parent?.left {
+            parent?.left = replacement
+        } else if node === parent?.right {
+            parent?.right = replacement
+        }
+
+        return nil
     }
 
 }
